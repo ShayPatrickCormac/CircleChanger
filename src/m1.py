@@ -481,12 +481,16 @@ class CircleChanger(object):
         fill color have no effect on or interaction with this method.
         """
         ################################################################
-        # TODO: 9.
+        # DONE: 9.
         #   First, READ the doc-string (specification) above.
         #   Second, READ the   run_test_change_to_next_color_in_tuple
         #   function (below).  Third, implement and test this method.
         ################################################################
+        if self.index > len(self.colors)-1:
+            self.index = 0
+        self.circle.fill_color = self.colors[self.index]
         self.index = self.index + 1
+
         
 
 
